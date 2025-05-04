@@ -5,23 +5,23 @@ import contect from '../../view/contact-me';
 import about from '../../view/about';
 const router = Router();
 
-router.get('/', (req: Request, res: Response) => {
+router.get('/', async (req: Request, res: Response) => {
     console.dir("GET Response from " + req.url);
-    res.send(home());
+    await res.send(home());
 });
 
-router.get('/contact', (req: Request, res: Response) => {
+router.get('/contact', async (req: Request, res: Response) => {
     console.dir("GET Response from " + req.url);
-    res.send(contect());
+   await  res.send(contect());
 });
-router.get('/about', (req: Request, res: Response) => {
+router.get('/about', async (req: Request, res: Response) => {
     console.dir("GET Response from " + req.url);
-    res.send(about());
+    await res.send(about());
 });
 
-router.use((req: Request, res: Response) => {
+router.use( async (req: Request, res: Response) => {
     console.dir("Page Not Found " + req.url);
-    res.status(404).send(abort404());
+    await res.status(404).send(abort404());
 });
 
 

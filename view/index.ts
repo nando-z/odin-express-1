@@ -39,7 +39,8 @@ export default function home() {
             <a href="/contact">Contact</a>
           </li>
           <li class="text-blue-500 hover:text-blue-700">
-            <a href="/login">Login</a>
+            <a href="/login">Not Found PATH</a>
+
           </li>
         </ul>
       </div>
