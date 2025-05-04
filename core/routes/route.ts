@@ -25,6 +25,12 @@ router.get('/about', async (req: Request, res: Response) => {
     await res.send(about());
 });
 
+router.get("/:username/messages", (req:Request, res:Response) => {
+    console.log(req.params);
+    res.end();
+  });
+
+
 router.use((req: Request, res: Response) => {
     console.dir("Page Not Found " + req.url);
      res.status(404).send(abort404());
