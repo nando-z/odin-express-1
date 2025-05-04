@@ -26,7 +26,8 @@ router.get('/about', async (req: Request, res: Response) => {
 });
 
 router.get("/:username/messages", (req:Request, res:Response) => {
-    console.log(req.params);
+    const {username } = req.params;
+    console.log(username);
     res.end();
   });
 
