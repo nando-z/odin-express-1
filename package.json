@@ -3,14 +3,17 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "serve": "bun run --watch app.ts"
+    "serve": "bun run --watch src/app.ts",
+    "dev": "nodemon --watch src --ext ts --exec  ts-node src/app.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/jsonwebtoken": "^9.0.9"
+    "@types/jsonwebtoken": "^9.0.9",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@types/express": "^5.0.1",
