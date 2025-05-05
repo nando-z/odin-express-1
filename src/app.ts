@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { type NextFunction, type Request, type Response } from 'express';
 import { config } from './config/app.config';
 import router from './routes/route';
 import middelware from './middelware/user.middelware';
@@ -9,6 +9,7 @@ const app = express();
 app.use('/', router);
 
 app.use(middelware);
+
 // Middleware Setting
 app.use(express.json());
 
